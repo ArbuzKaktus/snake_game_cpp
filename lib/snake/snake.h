@@ -17,10 +17,11 @@ public:
   void AddElement();
   void MakeMove();
   void SetDirection(const sf::Vector2f& new_direction);
-
+  
   std::vector<std::shared_ptr<sf::Vector2f>> GetAllElementsPosPtr();
   std::shared_ptr<sf::Vector2f> GetLastElementPosPtr();
 
+  void ShowSnake(sf::RenderWindow& window);
 private:
   friend class Game;
 
@@ -31,7 +32,6 @@ private:
     void SetBodyPosition(const sf::Vector2f& new_position);
   };
 
-  void ShowSnake(sf::RenderWindow& window);
 
   void UpdatePosition(const sf::Vector2f& new_target, std::list<Body>::iterator& curr_elem);
 

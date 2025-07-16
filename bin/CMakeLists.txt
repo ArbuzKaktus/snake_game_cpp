@@ -10,4 +10,5 @@ target_link_libraries(
   sfml-system
   sfml-audio
   snake_lib
+  apple_lib
 )

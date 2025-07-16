@@ -1,5 +1,6 @@
 #include "snake.h"
 
+#include "SFML/Graphics/Color.hpp"
 #include "SFML/Graphics/RectangleShape.hpp"
 #include "SFML/System/Vector2.hpp"
 #include "constants.h"
@@ -46,6 +47,7 @@ void Snake::AddElement() {
   }
 
   sf::RectangleShape new_shape({kCellSize, kCellSize});
+  new_shape.setFillColor(sf::Color::White);
   new_shape.setPosition(position);
   Body new_element(new_shape, std::make_shared<sf::Vector2f>(position));
   snake_.push_back(new_element);

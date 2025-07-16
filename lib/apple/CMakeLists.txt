@@ -4,6 +4,11 @@ target_link_libraries(
   apple_lib
   PRIVATE
   sfml-graphics
+)
+
+target_link_libraries(
+  apple_lib
+  INTERFACE
   constants_lib
 )
 

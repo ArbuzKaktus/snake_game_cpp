@@ -10,6 +10,6 @@ target_link_libraries(
 )
 
 target_include_directories(constants_lib INTERFACE ${CMAKE_SOURCE_DIR}/lib)
-add_subdirectory(apple)
 add_subdirectory(snake)
+add_subdirectory(apple)
 add_subdirectory(game)
