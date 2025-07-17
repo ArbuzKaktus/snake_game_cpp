@@ -11,4 +11,6 @@ target_link_libraries(
   sfml-audio
   snake_lib
   apple_lib
+  game_lib
 )
+

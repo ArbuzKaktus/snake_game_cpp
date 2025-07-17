@@ -4,10 +4,7 @@
 #include "SFML/Graphics/RenderWindow.hpp"
 #include "SFML/System/Vector2.hpp"
 #include <SFML/Graphics.hpp>
-#include <cstddef>
-#include <forward_list>
-#include <memory>
-#include <unordered_map>
+#include <list>
 
 class Game;
 
@@ -18,17 +15,18 @@ public:
   void MakeMove();
   void SetDirection(const sf::Vector2f& new_direction);
   
-  std::vector<std::shared_ptr<sf::Vector2f>> GetAllElementsPosPtr();
-  std::shared_ptr<sf::Vector2f> GetLastElementPosPtr();
+  const sf::Vector2f& GetHeadPosition();
+  
+  bool IsHit();
 
   void ShowSnake(sf::RenderWindow& window);
+
 private:
   friend class Game;
-
+  
   struct Body {
     sf::RectangleShape shape_;
-    std::shared_ptr<sf::Vector2f> position_;
-
+    
     void SetBodyPosition(const sf::Vector2f& new_position);
   };
 
