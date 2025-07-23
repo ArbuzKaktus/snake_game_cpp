@@ -10,7 +10,7 @@
 ### Сборка проекта
 ```bash
 # Клонирование репозитория
-git clonehttps://github.com/ArbuzKaktus/snake_game_сpp.git
+git clone https://github.com/ArbuzKaktus/snake_game_сpp.git
 cd snake_game_cpp
 
 mkdir build && cd build
